@@ -1,26 +1,19 @@
 import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import gsap from 'gsap';
-
-const OuterWrapper = styled.div`
-  width: fit-content;
-  height: fit-content;
-  position: absolute;
-  top: 20px;
-  right: 20px;
-`;
 
 const Wrapper = styled.div`
   width: 25px;
   height: 18px;
+  margin: 20px;
+  margin-right: 40px;
   position: relative;
   cursor: pointer;
   span {
     position: absolute;
     width: 100%;
     height: 2px;
-    background-color: #f2efdb;
+    background-color: ${({ theme }) => theme.colors.white};
     border-radius: 100px;
     transform: translateY(9px);
     transition: transform 1s;
@@ -50,13 +43,11 @@ const HamburgerMenu = () => {
   const tl = useRef(null);
 
   return (
-    <OuterWrapper>
-      <Wrapper ref={hamburgerRef}>
-        <span></span>
-        <span></span>
-        <span></span>
-      </Wrapper>
-    </OuterWrapper>
+    <Wrapper ref={hamburgerRef}>
+      <span></span>
+      <span></span>
+      <span></span>
+    </Wrapper>
   );
 };
 

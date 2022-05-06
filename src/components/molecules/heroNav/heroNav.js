@@ -6,14 +6,16 @@ import HamburgerMenu from 'components/atoms/hamburgerMenu/hamburgerMenu';
 
 const Wrapper = styled.div`
   position: absolute;
-  top: 20px;
-  left: 20px;
-  height: fit-content;
-  width: 80vw;
+  top: 0;
+  left: 0;
+  width: 100vw;
   z-index: 1;
   display: flex;
+  align-items:center;
+  justify-content: space-between;
   img {
     height: 65px;
+    margin: 20px;
   }
 `;
 
